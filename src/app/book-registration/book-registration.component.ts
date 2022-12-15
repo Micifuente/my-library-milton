@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Book } from '../models/book.model';
+import { AlertService } from '../services/alert.service';
+import { BookService } from '../services/book.service';
 
 @Component({
   selector: 'app-book-registration',
@@ -8,12 +10,19 @@ import { Book } from '../models/book.model';
 })
 export class BookRegistrationComponent {
     title="Registro de Libros"
-    @Output() createBookEvent= new EventEmitter<Book>
+    //@Output() createBookEvent= new EventEmitter<Book>
     inputName: string=""
     inputAuthor: string=""
     inputGenre: string=""
     inputYear: number=0
     inputDescription: string=""
+
+    constructor(
+      private alertService:AlertService,
+      private bookService: BookService       
+      ){
+
+    }
 
     //creamos funcion que ejecute este evento anterior
     addBook(){
@@ -22,6 +31,8 @@ export class BookRegistrationComponent {
                               this.inputGenre,
                               this.inputYear,
                               this.inputDescription)
-      this.createBookEvent.emit(newBook)
+      //this.createBookEvent.emit(newBook)
+      this.bookService.createBook(newBook)
+      this.alertService.showAlert("se ha creado un nuevo libro:"+newBook.name)
     }
 }

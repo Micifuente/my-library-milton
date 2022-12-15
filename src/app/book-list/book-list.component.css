@@ -1,4 +1,14 @@
-li:hover{
+.card-custom:hover{
     color: green;
     cursor: pointer;
+}
+
+.card-container-custom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-custom{
+    margin: 0.5em;
 }

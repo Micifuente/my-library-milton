@@ -1,20 +1,17 @@
 <h2>{{title}}</h2>
 
+<div class="form-custom">
 <form>
-    <label for="name">Nombre</label>
-    <input type="text" name="name" [(ngModel)]="inputName"/>
-    <br>
-    <label for="name">Author</label>
-    <input type="text" name="author" [(ngModel)]="inputAuthor"/>
-    <br>
-    <label for="name">Genre</label>
-    <input type="text" name="Genre" [(ngModel)]="inputGenre"/>
-    <br>
-    <label for="name">year</label>
-    <input type="number" name="year" [(ngModel)]="inputYear"/>
-    <br>
-    <label for="name">descriptiorn</label>
-    <input type="text" name="description" [(ngModel)]="inputDescription"/>
-    <br>
-    <input type="submit" (click)="addBook()"/>
+    <label for="name" class="form-label">Nombre</label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="inputName"/>
+    <label for="name" class="form-label">Author</label>
+    <input type="text" class="form-control" name="author" [(ngModel)]="inputAuthor"/>
+    <label for="name" class="form-label">Genre</label>
+    <input type="text" class="form-control" name="Genre" [(ngModel)]="inputGenre"/>
+    <label for="name" class="form-label">year</label>
+    <input type="number" class="form-control" name="year" [(ngModel)]="inputYear"/>
+    <label for="name" class="form-label">descriptiorn</label>
+    <input type="text" class="form-control" name="description" [(ngModel)]="inputDescription"/>
+    <input type="submit"  class="btn btn-primary" (click)="addBook()"/>
 </form>
+</div>

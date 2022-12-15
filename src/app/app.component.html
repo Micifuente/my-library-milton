@@ -1,6 +1,13 @@
-<h1>{{title}}</h1>
+<nav class="nav">
+    <a  class="nav-link active" aria-current="page" routerLink="/">Home</a>
+    <a class="nav-link" routerLink="/register-book">Register book</a>
+    <a class="nav-link" routerLink="/detail-book">Detail Book</a>
+  </nav>
+
+  <h1>{{title}}</h1>
+  <router-outlet></router-outlet>
+<!--
 <app-book-list [books]="books" (selectBookEvent)="setSelectedBook($event)">
 </app-book-list>
-<app-book-registration (createBookEvent)="createBook($event)">
-</app-book-registration>
-<app-book-detail [book]="selectedBook"></app-book-detail>
+<app-book-registration ></app-book-registration>
+<app-book-detail [book]="selectedBook"></app-book-detail>-->
